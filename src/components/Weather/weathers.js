@@ -20,6 +20,7 @@ const Weather = (props) => {
             .then((data) =>{
                 setWeatherInfo(data)
             })
+            .catch(err =>console.warn(`If there is no value in Main or Description, there is no information about ${cityName}`))
     },[])
 
     console.log(weatherInfo);
