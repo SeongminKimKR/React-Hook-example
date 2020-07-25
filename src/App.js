@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 //import {sum as add, multiple} from "./Math";
 import Header from "./components/Header"
-
+import { BrowserRouter } from "react-router-dom";
+import RouterApp from './RouterApp'
 function App() {
     /*
     const sum = "SUM!";
@@ -14,11 +15,11 @@ function App() {
 
     const cityName = "Seoul";
 
+    console.log(BrowserRouter);
     return (
-    <div className="App">
-        <Header cityName={cityName} />
-        <p>Hello World!</p>
-    </div>
+        <BrowserRouter>
+            <RouterApp />
+        </BrowserRouter>
   );
 }
 
