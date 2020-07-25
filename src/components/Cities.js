@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route, withRouter } from "react-router";
 import CityList from "./CityList";
-import Weather from "./Weather/index";
+import Weather from "./Weather/weathers";
 
 const API_CITIES = "http://localhost:8888/weather-service/available-cities";
 
