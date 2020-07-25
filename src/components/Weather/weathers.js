@@ -4,24 +4,23 @@ import React, {useEffect, useState} from "react";
 const Weather = (props) => {
     const { cityName } = props.match.params;
     const [weatherInfo, setWeatherInfo] = useState({
-            main:{
-                temp:''
-            },
-            weather:[
-                {
-                    main:'',
-                    description:'',
-                }
-            ]});
-
+        main:{
+            temp:''
+        },
+        weather:[
+            {
+                main:'',
+                description:'',
+            }
+        ]});
 
     useEffect(() => {
         fetch(`http://localhost:8888/weather-service/weathers?cityName=${cityName}`)
             .then(res => res.json())
             .then((data) =>{
-            setWeatherInfo(data)
-    })
-},[])
+                setWeatherInfo(data)
+            })
+    },[])
 
     console.log(weatherInfo);
 
